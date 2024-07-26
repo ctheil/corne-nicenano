@@ -10,14 +10,28 @@
 
 / {
     behaviors {
-        holdtap: holdtap {
+        lh_pht: lh_pht {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTAP";
+            label = "Left Positional Hold Tap";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <100>;
+            flavor = "tap-unless-interrupted";
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <18 19 20 21 22 23>;
+        };
+
+        rh_pht: rh_pht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Right Positional Hold Tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            flavor = "tap-unless-interrupted";
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <17 16 15 14 13 12>;
         };
     };
 
@@ -33,10 +47,10 @@
 
             display-name = "base";
             bindings = <
-&kp TAB     &kp Q                &kp W             &kp E                  &kp R                &kp T        &kp Y    &kp U                 &kp I                   &kp O             &kp P                         &kp RETURN
-&kp ESCAPE  &holdtap LEFT_ALT A  &holdtap LCTRL S  &holdtap LEFT_SHIFT D  &holdtap LEFT_GUI F  &kp G        &kp H    &holdtap RIGHT_GUI J  &holdtap RIGHT_SHIFT K  &holdtap RCTRL L  &holdtap RIGHT_ALT SEMICOLON  &kp SQT
-&trans      &kp Z                &kp X             &kp C                  &kp V                &kp B        &kp N    &kp M                 &kp COMMA               &kp DOT           &kp FSLH                      &trans
-                                                   &mo 6                  &mo 2                &kp SPACE    &kp RET  &mo 1                 &kp BACKSPACE
+&kp TAB     &kp Q               &kp W            &kp E                 &kp R               &kp T        &kp Y    &kp U                &kp I                  &kp O            &kp P                        &kp RETURN
+&kp ESCAPE  &lh_pht LEFT_ALT A  &lh_pht LCTRL S  &lh_pht LEFT_SHIFT D  &lh_pht LEFT_GUI F  &kp G        &kp H    &rh_pht RIGHT_GUI J  &rh_pht RIGHT_SHIFT K  &rh_pht RCTRL L  &rh_pht RIGHT_ALT SEMICOLON  &kp SQT
+&trans      &kp Z               &kp X            &kp C                 &kp V               &kp B        &kp N    &kp M                &kp COMMA              &kp DOT          &kp FSLH                     &trans
+                                                 &mo 6                 &mo 2               &kp SPACE    &kp RET  &mo 1                &kp BACKSPACE
             >;
         };
 
