@@ -33,6 +33,17 @@
             quick-tap-ms = <200>;
             hold-trigger-key-positions = <17 16 15 14 13 12>;
         };
+
+        hm: hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -47,10 +58,10 @@
 
             display-name = "base";
             bindings = <
-&kp TAB     &kp Q               &kp W            &kp E                 &kp R               &kp T        &kp Y    &kp U                &kp I                  &kp O            &kp P                        &kp RETURN
-&kp ESCAPE  &lh_pht LEFT_ALT A  &lh_pht LCTRL S  &lh_pht LEFT_SHIFT D  &lh_pht LEFT_GUI F  &kp G        &kp H    &rh_pht RIGHT_GUI J  &rh_pht RIGHT_SHIFT K  &rh_pht RCTRL L  &rh_pht RIGHT_ALT SEMICOLON  &kp SQT
-&trans      &kp Z               &kp X            &kp C                 &kp V               &kp B        &kp N    &kp M                &kp COMMA              &kp DOT          &kp FSLH                     &trans
-                                                 &mo 6                 &mo 2               &kp SPACE    &kp RET  &mo 1                &kp BACKSPACE
+&kp TAB     &kp Q           &kp W        &kp E             &kp R           &kp T        &kp Y    &kp U            &kp I              &kp O        &kp P                    &kp RETURN
+&kp ESCAPE  &hm LEFT_ALT A  &hm LCTRL S  &hm LEFT_SHIFT D  &hm LEFT_GUI F  &kp G        &kp H    &hm RIGHT_GUI J  &hm RIGHT_SHIFT K  &hm RCTRL L  &hm RIGHT_ALT SEMICOLON  &kp SQT
+&trans      &kp Z           &kp X        &kp C             &kp V           &kp B        &kp N    &kp M            &kp COMMA          &kp DOT      &kp FSLH                 &trans
+                                         &mo 6             &mo 2           &kp SPACE    &kp RET  &mo 1            &kp BACKSPACE
             >;
         };
 
