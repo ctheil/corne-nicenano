@@ -21,26 +21,10 @@
 
             display-name = "base";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R  &kp T                   &kp Y                   &kp U  &kp I          &kp O    &kp P     &kp RETURN
-&kp ESCAPE        &kp A  &kp S  &kp D     &kp F  &kp G                   &kp H                   &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp V  &kp B                   &kp N                   &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_ALT
-                                &kp LGUI  &mo 2  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT RETURN  &mo 1  &kp BACKSPACE
-            >;
-        };
-
-        numbers_and_nav {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "nav_nums";
-            bindings = <
-&trans          &kp N1  &kp N2  &kp N3        &kp N4        &kp N5            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &trans
-&trans          &trans  &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans            &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans        &trans        &trans            &trans    &trans    &trans  &trans     &trans  &trans
-                                &trans        &trans        &kp LEFT_SHIFT    &trans    &trans    &trans
+&kp TAB           &kp Q  &kp W  &kp E     &kp R   &kp T                   &kp Y                   &kp U   &kp I          &kp O    &kp P     &kp RETURN
+&kp ESCAPE        &kp A  &kp S  &kp D     &kp F   &kp G                   &kp H                   &kp J   &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp V   &kp B                   &kp N                   &kp M   &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_ALT
+                                &kp LGUI  &trans  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT RETURN  &tog 1  &kp BACKSPACE
             >;
         };
 
@@ -55,8 +39,24 @@
             bindings = <
 &trans  &kp AMPERSAND    &kp PLUS       &kp MINUS  &kp ASTERISK      &kp LCTRL      &kp C_PREV            &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOLUME_UP  &trans
 &trans  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH   &kp DOLLAR        &kp PERCENT    &kp LEFT_PARENTHESIS  &kp LEFT_BRACE    &kp LBKT    &trans        &kp BSLH         &kp GRAVE
-&mo 4   &trans           &kp LESS_THAN  &kp EQUAL  &kp GREATER_THAN  &trans         &kp MINUS             &kp PLUS          &trans      &trans        &kp PIPE         &kp TILDE
-                                        &mo 3      &trans            &trans         &trans                &mo 5             &trans
+&trans  &trans           &kp LESS_THAN  &kp EQUAL  &kp GREATER_THAN  &trans         &kp MINUS             &kp PLUS          &trans      &trans        &kp PIPE         &kp TILDE
+                                        &mo 3      &tog 0            &mo 4          &trans                &tog 2            &trans
+            >;
+        };
+
+        numbers_and_nav {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            display-name = "nav_nums";
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3        &kp N4        &kp N5            &kp N6     &kp N7    &kp N8     &kp N9      &kp N0     &trans
+&trans  &trans  &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans            &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &trans     &trans
+&trans  &trans  &trans  &trans        &trans        &trans            &kp MINUS  &kp PLUS  &kp COMMA  &kp PERIOD  &kp SLASH  &trans
+                        &trans        &tog 0        &kp LEFT_SHIFT    &trans     &trans    &trans
             >;
         };
 
