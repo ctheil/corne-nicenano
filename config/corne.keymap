@@ -84,10 +84,10 @@
 
         i3_nav {
             bindings = <
-&trans  &kp LG(LS(NUMBER_1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))    &kp LS(LG(NUMBER_6))  &kp LS(LG(N7))  &kp LS(LG(N8))  &kp LS(LG(N9))  &kp LS(LG(N0))  &trans
-&trans  &trans                &trans          &trans                &trans                &trans            &trans                &trans          &trans          &trans          &trans          &trans
-&trans  &trans                &trans          &trans                &trans                &trans            &trans                &trans          &trans          &trans          &trans          &trans
-                                              &trans                &trans                &trans            &trans                &trans          &trans
+&trans  &kp LG(LS(LA(LC(NUMBER_1))))  &kp LS(LG(LA(LC(N2))))  &kp LS(LG(LA(LC(NUMBER_3))))  &kp LS(LG(LA(LC(NUMBER_4))))  &kp LS(LG(LA(LC(N5))))    &kp LS(LG(LA(LC(NUMBER_6))))  &kp LS(LG(LA(LC(N7))))  &kp LS(LG(LA(LC(N8))))  &kp LS(LG(LA(LC(N9))))  &kp LS(LG(LA(LC(N0))))  &trans
+&trans  &trans                        &trans                  &trans                        &trans                        &trans                    &trans                        &trans                  &trans                  &trans                  &trans                  &trans
+&trans  &trans                        &trans                  &trans                        &trans                        &trans                    &trans                        &trans                  &trans                  &trans                  &trans                  &trans
+                                                              &trans                        &trans                        &trans                    &trans                        &trans                  &trans
             >;
 
             label = "win_nav";
